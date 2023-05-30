@@ -1,0 +1,25 @@
+Create A store database
+
+CREATE TABLE crafts_store (id INTEGER PRIMARY KEY, item TEXT, quantity TEXT, aisle TEXT, price TEXT);
+
+INSERT INTO crafts_store VALUES (1, "fabric", 45, 2, "$4.00");
+INSERT INTO crafts_store VALUES (2, "buttons", 300, 3, ".60");
+INSERT INTO crafts_store VALUES (3, "paper", 1000, 1, "$2.00");
+INSERT INTO crafts_store VALUES (4, "fake plants", 75, 5, "$3.00");
+INSERT INTO crafts_store VALUES (5, "paint", 33, 6, "$2.50");
+INSERT INTO crafts_store VALUES (6, "candy", 25, 1, "$5.00");
+INSERT INTO crafts_store VALUES (7, "coloring books", 50, 7, "$10.00");
+INSERT INTO crafts_store VALUES (8, "teacher craft", 300, 8, "$40.00");
+INSERT INTO crafts_store VALUES (9, "picture frames", 40, 9, "$50.00");
+INSERT INTO crafts_store VALUES (10, "paintbrushes", 30, 6, "$12.00");
+INSERT INTO crafts_store VALUES (11, "kids", 100, 10, "$30.00");
+INSERT INTO crafts_store VALUES (12, "tech", 30, 11, "$25.00");
+INSERT INTO crafts_store VALUES (13, "stickers", 100, 1, "$2.00");
+INSERT INTO crafts_store VALUES (14, "balloons", 80, 1, "$.75");
+INSERT INTO crafts_store VALUES (15, "party supplies", 300, 1, "$60.00");
+
+---display the total database sum
+SELECT SUM(price) FROM crafts_store;
+
+---sort items by aisle number
+SELECT * FROM crafts_store GROUP BY aisle
